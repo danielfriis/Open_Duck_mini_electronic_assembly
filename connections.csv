@@ -1,0 +1,50 @@
+id,from,to,net,gauge,location,notes
+W01,Cell holder black lead (cell 1 −),BMS B−,PACK_NEG,20 AWG,Pack,Solder 1st
+W02,Cell holder yellow lead (midpoint),BMS BM,PACK_MID,22 AWG,Pack,Solder 2nd. Yellow wire added to the holder's metal strip
+W03,Cell holder red lead (cell 2 +),BMS B+,PACK_POS,20 AWG,Pack,Solder 3rd. B+ pad not P+
+W04,Charger BAT−,BMS P−,GND,20 AWG,Pack,Solder before W05
+W05,Charger BAT+,BMS P+,P_POS,20 AWG,Pack,
+W06,BMS P+,Slide switch common,P_POS,18 AWG,Pack,Heat-shrink
+W07,Slide switch on-leg,WAGO plus,V7_SW,18 AWG,Body,
+W08,BMS P−,WAGO minus,GND,18 AWG,Body,
+W09,WAGO plus,Servo board DC+ (screw terminal),V7_SW,18 AWG,Body,
+W10,WAGO minus,Servo board DC− (screw terminal),GND,18 AWG,Body,
+W11,WAGO plus,UBEC IN+,V7_SW,20 AWG,Neck,Optional connector here for head removal
+W12,WAGO minus,UBEC IN−,GND,20 AWG,Neck,Optional connector here for head removal
+W13,UBEC OUT+,Stripboard 5V rail col 1,V5,20 AWG,Head,
+W14,UBEC OUT−,Stripboard GND rail col 1,GND,20 AWG,Head,
+W15,Stripboard 5V rail col 2,Pi pin 2,V5,22 AWG,Head,Dupont
+W16,Stripboard GND rail col 2,Pi pin 6,GND,22 AWG,Head,Dupont
+W17,Stripboard 5V rail col 3,Amplifier VIN,V5,22 AWG,Head,
+W18,Stripboard GND rail col 3,Amplifier GND,GND,22 AWG,Head,
+W19,Speaker +,Amplifier SPK+,SPK_P,22 AWG,Head,
+W20,Speaker −,Amplifier SPK−,SPK_N,22 AWG,Head,
+W21,Pi pin 12,Microphone BCLK,I2S_BCLK,signal,Head,Dupont
+W22,Microphone BCLK pad,Amplifier BCLK,I2S_BCLK,signal,Head,Chain wire soldered on the microphone pad
+W23,Pi pin 35,Microphone LRCL,I2S_LRC,signal,Head,Dupont
+W24,Microphone LRCL pad,Amplifier LRC,I2S_LRC,signal,Head,Chain wire soldered on the microphone pad
+W25,Pi pin 40,Amplifier DIN,I2S_DOUT,signal,Head,Dupont
+W26,Pi pin 38,Microphone DOUT,I2S_DIN,signal,Head,Dupont
+W27,Pi pin 17,Microphone 3V,V3V3,signal,Head,Dupont
+W28,Pi pin 39,Microphone GND,GND,signal,Head,Dupont. SEL left open (left channel)
+W29,Pi pin 16,Resistor R1 (100 Ω) lead A,LED_R,signal,Head,Dupont
+W30,Resistor R1 lead B,Right eye LED +,LED_R_A,signal,Head,
+W31,Pi pin 18,Resistor R2 (100 Ω) lead A,LED_L,signal,Head,Dupont
+W32,Resistor R2 lead B,Left eye LED +,LED_L_A,signal,Head,
+W33,Right eye LED − and left eye LED − (joined),Stripboard GND rail col 4,GND,signal,Head,Join cathodes at the LEDs
+W34,Right ear servo (3-pin plug),Stripboard col 6 header,V5 / GND / EAR_R,servo lead,Head,Brown toward GND
+W35,Stripboard signal lane col 7,Pi pin 32,EAR_R,signal,Head,Dupont
+W36,Left ear servo (3-pin plug),Stripboard col 9 header,V5 / GND / EAR_L,servo lead,Head,Brown toward GND
+W37,Stripboard signal lane col 10,Pi pin 33,EAR_L,signal,Head,Dupont
+W38,Pi pin 1,IMU VIN,V3V3,signal,Neck,Dupont
+W39,Pi pin 9,IMU GND,GND,signal,Neck,Dupont
+W40,Pi pin 3,IMU SDA,I2C_SDA,signal,Neck,Dupont
+W41,Pi pin 5,IMU SCL,I2C_SCL,signal,Neck,Dupont
+W42,Pi pin 15,Left foot switch COM,FOOT_L,signal,Neck,Dupont
+W43,Pi pin 20,Left foot switch NO,GND,signal,Neck,Dupont
+W44,Pi pin 13,Right foot switch COM,FOOT_R,signal,Neck,Dupont
+W45,Pi pin 14,Right foot switch NO,GND,signal,Neck,Dupont
+W46,Pi middle micro-USB (USB),Servo board USB-C,USB,cable,Neck,Not the PWR port
+W47,Servo board servo bus 1,Left leg servo chain,SERVO_BUS_1,servo cable,Body,
+W48,Servo board servo bus 2,Right leg servo chain,SERVO_BUS_2,servo cable,Body,Neck and head servos chain on as in the Open Duck build. Which bus they share is not verified here
+W49,Pi CSI connector,Camera,CSI,ribbon,Head,
