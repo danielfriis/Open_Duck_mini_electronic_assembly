@@ -6,15 +6,14 @@ The official guides run a 5 V wire and a GND wire across the head and splice up 
 
 ## Stripboard
 
-![Stripboard layout](../diagrams/stripboard.png)
+![Stripboard layout](../diagrams/stripboard.svg)
 
-A piece of stripboard (copper strips, 2.54 mm pitch), 3 strips wide and 10 holes long.
+A piece of stripboard (copper strips, 2.54 mm pitch), 2 strips wide and 7 holes long. It carries power only; no signals pass through it.
 
 | Strip | Use |
 |---|---|
 | Top | GND rail |
-| Middle | 5 V rail |
-| Bottom | Signal lane for the ear servos, cut between the two servos |
+| Bottom | 5 V rail |
 
 | Column | Part |
 |---|---|
@@ -22,25 +21,30 @@ A piece of stripboard (copper strips, 2.54 mm pitch), 3 strips wide and 10 holes
 | 2 | Wire pair to the Pi: 5 V → pin 2, GND → pin 6 |
 | 3 | Amplifier VIN and GND |
 | 4 | LED cathodes (one wire, see below) |
-| 6 | Right ear servo: 3-pin header across all three strips |
-| 7 | Right ear signal → Pi pin 32 |
-| 8 | Signal strip cut here |
-| 9 | Left ear servo: 3-pin header across all three strips |
-| 10 | Left ear signal → Pi pin 33 |
+| 5 | Right ear servo: 2-pin header for brown (GND) and red (5 V) |
+| 6 | Left ear servo: 2-pin header for brown (GND) and red (5 V) |
+| 7 | Spare |
 
 ### Building it
 
 1. Score the board along a hole row with a craft knife, on both sides. Snap it over a table edge.
-2. Cut the signal strip at hole 8: twist a 3–4 mm drill bit by hand until the copper is gone around the hole.
-3. Solder the pin headers, then the UBEC wires.
-4. Continuity check: 5 V to GND must not beep. Across the cut must not beep.
-5. Power on with nothing plugged in. Measure 5.0 V ± 0.1 between the rails.
-6. Mark the GND side. Servo plugs go on with the **brown** wire toward GND.
-7. Mount with double-sided foam tape in the free area between the UBEC and the Pi.
+2. Solder the pin headers, then the UBEC wires.
+3. Continuity check: 5 V to GND must not beep.
+4. Power on with nothing plugged in. Measure 5.0 V ± 0.1 between the rails.
+5. Mark the GND side. Servo plugs go on with the **brown** wire toward GND.
+6. Mount with double-sided foam tape in the free area between the UBEC and the Pi.
 
 ## Ear servos (SG90)
 
-Power comes from the stripboard (UBEC 5 V rail), not from the Pi. Signal comes from the Pi through the stripboard signal lane.
+Power comes from the stripboard (UBEC 5 V rail), not from the Pi. The signal goes straight to the Pi with no joint in between.
+
+The servo's plug holds all three wires in one housing. Split it:
+
+1. Lift the plastic latch next to the orange wire with a needle and slide the terminal out.
+2. Put heat-shrink over the bare terminal and push it directly onto the Pi pin.
+3. Brown and red stay in the original housing, which plugs onto the stripboard header.
+
+No extra parts needed. If the orange wire does not reach the Pi, extend it with a male–female jumper.
 
 | Servo | Signal | Pin |
 |---|---|---|

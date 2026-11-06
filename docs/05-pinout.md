@@ -22,8 +22,8 @@ Viewed from above with the SD card on the left. Pin 1 is the square pad.
 | 17 | 3.3 V | Microphone 3V |
 | 18 | GPIO 24 | 100 Ω → left eye LED + |
 | 20 | GND | Left foot switch, NO |
-| 32 | GPIO 12 (PWM) | Stripboard → right ear servo signal |
-| 33 | GPIO 13 (PWM) | Stripboard → left ear servo signal |
+| 32 | GPIO 12 (PWM) | Right ear servo, orange wire directly |
+| 33 | GPIO 13 (PWM) | Left ear servo, orange wire directly |
 | 35 | LRC (GPIO 19) | Microphone LRCL, chained on to amplifier LRC |
 | 38 | GPIO 20 (I2S in) | Microphone DOUT |
 | 39 | GND | Microphone GND |

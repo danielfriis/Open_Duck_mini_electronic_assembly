@@ -23,7 +23,7 @@ Work through this in order. Stop at the first check that fails.
 
 ## Head, without the Pi
 
-- [ ] Stripboard: 5 V to GND does not beep. Across the signal-strip cut does not beep.
+- [ ] Stripboard: 5 V to GND does not beep.
 - [ ] Switch on: 5.0 V ± 0.1 between the stripboard rails. UBEC jumper (if any) on 5 V.
 - [ ] Switch off. Ear servos on with brown toward GND.
 

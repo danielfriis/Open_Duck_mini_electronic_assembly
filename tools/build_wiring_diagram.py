@@ -77,8 +77,6 @@ PIN_DA = {
     "Bus in": "Bus ind",
     "5V rail": "5V-bane",
     "GND rail": "GND-bane",
-    "Right ear signal lane": "Højre øre signalbane",
-    "Left ear signal lane": "Venstre øre signalbane",
     "Micro-USB (USB)": "Micro-USB (USB)",
     "Camera connector": "Kamerastik",
     "SEL (leave open)": "SEL (lad være åben)",

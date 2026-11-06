@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 270" role="img" font-family="Helvetica, Arial, sans-serif">
+  <title>Head stripboard layout</title>
+  <desc>Two copper strips: GND on top, 5V below. Seven columns. Column 1 UBEC output, column 2 wire pair to the Pi, column 3 amplifier power, column 4 LED cathodes (GND only), column 5 right ear servo plug, column 6 left ear servo plug, column 7 spare.</desc>
+  <rect width="640" height="270" fill="#ffffff"/>
+  <g font-size="12" fill="#555555">
+    <text x="24" y="78">GND</text>
+    <text x="24" y="128">5V</text>
+  </g>
+  <rect x="90" y="60" width="364" height="28" rx="3" fill="#ead9cb"/>
+  <rect x="90" y="110" width="364" height="28" rx="3" fill="#ead9cb"/>
+  <g fill="#ffffff" stroke="#777777" stroke-width="1">
+    <circle cx="116" cy="74" r="3.5"/><circle cx="168" cy="74" r="3.5"/><circle cx="220" cy="74" r="3.5"/><circle cx="272" cy="74" r="3.5"/><circle cx="324" cy="74" r="3.5"/><circle cx="376" cy="74" r="3.5"/><circle cx="428" cy="74" r="3.5"/>
+    <circle cx="116" cy="124" r="3.5"/><circle cx="168" cy="124" r="3.5"/><circle cx="220" cy="124" r="3.5"/><circle cx="272" cy="124" r="3.5"/><circle cx="324" cy="124" r="3.5"/><circle cx="376" cy="124" r="3.5"/><circle cx="428" cy="124" r="3.5"/>
+  </g>
+  <g fill="#1b1b1b">
+    <circle cx="116" cy="74" r="7"/><circle cx="116" cy="124" r="7"/>
+    <circle cx="168" cy="74" r="7"/><circle cx="168" cy="124" r="7"/>
+    <circle cx="220" cy="74" r="7"/><circle cx="220" cy="124" r="7"/>
+    <circle cx="272" cy="74" r="7"/>
+  </g>
+  <g fill="none" stroke="#a85a22" stroke-width="2.5">
+    <rect x="317" y="67" width="14" height="14"/><rect x="317" y="117" width="14" height="14"/>
+    <rect x="369" y="67" width="14" height="14"/><rect x="369" y="117" width="14" height="14"/>
+  </g>
+  <g font-size="12" fill="#1b1b1b" text-anchor="middle">
+    <text x="116" y="40">UBEC</text><text x="168" y="40">Pi 2/6</text><text x="220" y="40">Amp</text><text x="272" y="40">LED −</text><text x="324" y="40">R ear</text><text x="376" y="40">L ear</text><text x="428" y="40" fill="#999999">spare</text>
+  </g>
+  <g font-size="11" fill="#999999" text-anchor="middle">
+    <text x="116" y="160">1</text><text x="168" y="160">2</text><text x="220" y="160">3</text><text x="272" y="160">4</text><text x="324" y="160">5</text><text x="376" y="160">6</text><text x="428" y="160">7</text>
+  </g>
+  <g font-size="12" fill="#444444">
+    <text x="90" y="198">● soldered wire    □ 2-pin header for a servo plug (brown and red only, brown toward GND)</text>
+    <text x="90" y="222">Orange servo wires go directly to the Pi: right ear pin 32, left ear pin 33.</text>
+    <text x="90" y="246">LED cathodes are joined at the LEDs; one wire to column 4.</text>
+  </g>
+</svg>

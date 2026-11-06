@@ -33,14 +33,12 @@ W31,pi,p18,r2,a,LED,signal,Dupont at the Pi
 W32,r2,b,ledl,a,LED,signal,
 W33,ledr,k,ledl,k,GND,signal,Join the cathodes at the LEDs
 W34,ledl,k,strip,gnd,GND,signal,Stripboard column 4
-W35,earr,gnd,strip,gnd,GND,servo lead,Plug on stripboard column 6. Brown toward GND
-W36,earr,vcc,strip,v5,V5,servo lead,Plug on stripboard column 6
-W37,earr,sig,strip,sigr,EAR,servo lead,Plug on stripboard column 6
-W38,pi,p32,strip,sigr,EAR,signal,Stripboard column 7. Dupont at the Pi
-W39,earl,gnd,strip,gnd,GND,servo lead,Plug on stripboard column 9. Brown toward GND
-W40,earl,vcc,strip,v5,V5,servo lead,Plug on stripboard column 9
-W41,earl,sig,strip,sigl,EAR,servo lead,Plug on stripboard column 9
-W42,pi,p33,strip,sigl,EAR,signal,Stripboard column 10. Dupont at the Pi
+W35,earr,gnd,strip,gnd,GND,servo lead,Original servo plug (brown and red only) on stripboard column 5. Brown toward GND
+W36,earr,vcc,strip,v5,V5,servo lead,Original servo plug on stripboard column 5
+W37,earr,sig,pi,p32,EAR,servo lead,"Orange terminal taken out of the servo plug, heat-shrunk, pushed directly on Pi pin 32"
+W39,earl,gnd,strip,gnd,GND,servo lead,Original servo plug (brown and red only) on stripboard column 6. Brown toward GND
+W40,earl,vcc,strip,v5,V5,servo lead,Original servo plug on stripboard column 6
+W41,earl,sig,pi,p33,EAR,servo lead,"Orange terminal taken out of the servo plug, heat-shrunk, pushed directly on Pi pin 33"
 W43,pi,p1,imu,vin,V3,signal,Through the neck. Dupont at the Pi
 W44,pi,p9,imu,gnd,GND,signal,Through the neck. Dupont at the Pi
 W45,pi,p3,imu,sda,I2C,signal,Through the neck. Dupont at the Pi
