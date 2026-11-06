@@ -1,0 +1,27 @@
+part,area,label_en,label_da,pins
+cells,pack,18650 cell holder (2 cells),18650-celleholder (2 celler),red=Red (+) top of pack|yellow=Yellow BM midpoint|black=Black (−) bottom of pack
+bms,pack,2S BMS (HX-2S-JH20),2S BMS (HX-2S-JH20),bneg=B−|bm=BM|bpos=B+|pneg=P−|ppos=P+
+chg,pack,USB-C charger (2S),USB-C-lader (2S),batp=BAT+|batn=BAT−
+sw,pack,Slide switch,Afbryder,com=COM|on=ON
+wagop,body,WAGO plus (3-way),WAGO plus (3-vejs),a=1|b=2|c=3
+wagom,body,WAGO minus (3-way),WAGO minus (3-vejs),a=1|b=2|c=3
+sb,body,Servo board (Waveshare Bus Servo Adapter A),Servo-board (Waveshare Bus Servo Adapter A),dcp=DC+ screw terminal|dcn=DC− screw terminal|usb=USB-C|bus1=Servo bus 1|bus2=Servo bus 2
+legl,body,Left leg servos (5× STS3215),Venstre ben-servoer (5× STS3215),in=Bus in
+legr,body,Right leg servos (5× STS3215),Højre ben-servoer (5× STS3215),in=Bus in
+neck,body,Neck and head servos (4× STS3215),Hals- og hovedservoer (4× STS3215),in=Bus in
+imu,body,BNO055 IMU,BNO055 IMU,vin=VIN|gnd=GND|sda=SDA|scl=SCL
+footl,body,Left foot switch,Venstre fodkontakt,com=COM|no=NO
+footr,body,Right foot switch,Højre fodkontakt,com=COM|no=NO
+ubec,head,UBEC 5 V,UBEC 5 V,inp=IN+|inn=IN−|outp=OUT+|outn=OUT−
+strip,head,Stripboard (see stripboard diagram),Stripboard (se stripboard-diagram),v5=5V rail|gnd=GND rail|sigr=Right ear signal lane|sigl=Left ear signal lane
+pi,head,Raspberry Pi Zero 2 W (see header map),Raspberry Pi Zero 2 W (se pin-kort),p1=Pin 1 · 3.3V|p2=Pin 2 · 5V|p3=Pin 3 · SDA|p5=Pin 5 · SCL|p6=Pin 6 · GND|p9=Pin 9 · GND|p12=Pin 12 · BCLK|p13=Pin 13 · GPIO 27|p14=Pin 14 · GND|p15=Pin 15 · GPIO 22|p16=Pin 16 · GPIO 23|p17=Pin 17 · 3.3V|p18=Pin 18 · GPIO 24|p20=Pin 20 · GND|p32=Pin 32 · GPIO 12|p33=Pin 33 · GPIO 13|p35=Pin 35 · LRC|p38=Pin 38 · GPIO 20|p39=Pin 39 · GND|p40=Pin 40 · GPIO 21|usb=Micro-USB (USB)|csi=Camera connector
+amp,head,MAX98357A amplifier,MAX98357A-forstærker,vin=VIN|gnd=GND|bclk=BCLK|lrc=LRC|din=DIN|spkp=SPK+|spkn=SPK−
+spk,head,Speaker (4 Ω),Højttaler (4 Ω),p=+|n=−
+mic,head,SPH0645 microphone,SPH0645-mikrofon,v3=3V|gnd=GND|bclk=BCLK|lrcl=LRCL|dout=DOUT|sel=SEL (leave open)
+r1,head,R1 100 Ω,R1 100 Ω,a=A|b=B
+r2,head,R2 100 Ω,R2 100 Ω,a=A|b=B
+ledr,head,Right eye LED,Højre øje-LED,a=+|k=−
+ledl,head,Left eye LED,Venstre øje-LED,a=+|k=−
+earr,head,Right ear servo (SG90),Højre ørerservo (SG90),gnd=Brown GND|vcc=Red VCC|sig=Orange SIG
+earl,head,Left ear servo (SG90),Venstre ørerservo (SG90),gnd=Brown GND|vcc=Red VCC|sig=Orange SIG
+cam,head,Raspberry Pi camera,Raspberry Pi-kamera,csi=CSI

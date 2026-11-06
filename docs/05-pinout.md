@@ -2,6 +2,8 @@
 
 ![Header map](../diagrams/pinout.png)
 
+![Signal wiring](../diagrams/wiring-signals.png)
+
 Viewed from above with the SD card on the left. Pin 1 is the square pad.
 
 | Pin | Function | Wire from |

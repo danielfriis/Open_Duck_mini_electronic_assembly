@@ -24,8 +24,20 @@ The official sources disagree with each other in places: the GitHub assembly gui
 | [docs/06-bring-up.md](docs/06-bring-up.md) | Checks before and at first power-on |
 | [docs/07-tnkr-errata.md](docs/07-tnkr-errata.md) | Every disagreement found in the TNKR guide |
 | [docs/bom-electrical.md](docs/bom-electrical.md) | Electrical parts: kit contents and extras |
-| [connections.csv](connections.csv) | Every wire: from, to, net, gauge. The single source of truth |
-| [diagrams/](diagrams/) | Schematic, stripboard layout, header map |
+| [connections.csv](connections.csv) | Every wire, pad to pad: from, to, net, gauge. The single source of truth |
+| [parts.csv](parts.csv) | Every part and its pads or terminals |
+| [diagrams/](diagrams/) | Wiring diagrams (power, head, signals), stripboard layout, header map |
+| [tools/build_wiring_diagram.py](tools/build_wiring_diagram.py) | Generates the wiring diagrams from the two CSV files |
+
+## Changing the wiring
+
+Edit `connections.csv` (and `parts.csv` for new parts), then run:
+
+```sh
+python3 tools/build_wiring_diagram.py
+```
+
+The script checks that every wire ends on a known pad and that no pad is left unconnected, then redraws `diagrams/wiring-*.svg` and `.png`. Requires Graphviz.
 
 ## Status
 

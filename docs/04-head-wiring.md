@@ -2,6 +2,8 @@
 
 The official guides run a 5 V wire and a GND wire across the head and splice up to six branches onto each. Every splice is a weak point and nothing can be removed without cutting. This build replaces the splices with a small stripboard.
 
+![Head wiring](../diagrams/wiring-head.png)
+
 ## Stripboard
 
 ![Stripboard layout](../diagrams/stripboard.png)

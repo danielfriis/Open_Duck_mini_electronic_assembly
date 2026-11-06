@@ -2,6 +2,8 @@
 
 Parts: 18650 cell holder (2 cells), 2× 18650 cells, 2S BMS (HX-2S-JH20), USB-C 2S charger board, slide switch.
 
+![Power wiring](../diagrams/wiring-power.png)
+
 ## How the BMS works
 
 The HX-2S-JH20 has two groups of pads:
@@ -31,6 +33,17 @@ Order matters. Do not change it.
 7. **P− to WAGO minus.**
 
 After this, P+ carries two wires (charger BAT+, switch) and P− carries two wires (charger BAT−, WAGO minus).
+
+## Two wires on one pad
+
+Both wires belong on the pad: the pad is the connection point. Do not splice them somewhere else first; that only adds a joint.
+
+1. Tin both wire ends separately.
+2. If the pad has a plated hole, push the thick wire (18 AWG, to the switch or WAGO) through from below and solder it. Then solder the thin charger wire on top of the same pad.
+3. If the pad has no hole, lay the two tinned ends side by side, twist them together, tin the twist and solder it onto the pad as one.
+4. Check that the joint does not touch the neighbouring pad, and tug each wire gently.
+
+The thick wire carries the robot's current. The charger wire carries 1–2 A at most.
 
 ## Wire gauge
 

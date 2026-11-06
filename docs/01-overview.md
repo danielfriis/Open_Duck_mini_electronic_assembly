@@ -1,6 +1,14 @@
 # System overview
 
-![Full schematic](../diagrams/schematic.png)
+Three wiring diagrams show every pad and every wire. They are generated from [connections.csv](../connections.csv); wire IDs (W01…) match the table.
+
+| Diagram | Shows |
+|---|---|
+| [Power](../diagrams/wiring-power.png) | Battery pack, switch, WAGO split, servo board, UBEC |
+| [Head](../diagrams/wiring-head.png) | Stripboard and everything it powers |
+| [Signals](../diagrams/wiring-signals.png) | Raspberry Pi header to IMU, feet, audio, USB, camera |
+
+![Power wiring](../diagrams/wiring-power.png)
 
 ## Power architecture
 
