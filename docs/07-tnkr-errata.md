@@ -4,12 +4,12 @@ Found by comparing the TNKR Open Duck Mini V2 guide (steps, 2D/3D views, connect
 
 | # | Topic | TNKR shows | Reality | This repo |
 |---|---|---|---|---|
-| 1 | Pack connector | XT60 between switch and loads (steps 37, 39, 40, 52) | No XT60 in the kit BOM. The BOM lists 2.1 mm barrel plugs instead. | No pack connector. The switch cuts power. |
+| 1 | Pack connector | XT60 between switch and loads (steps 37, 39, 40, 52) | No XT60 in the kit BOM. The BOM lists one "2.1mm barrel jack" (Power), which no step, drawing or connection table uses. | No pack connector. The switch cuts power. |
 | 2 | Fuse | "The fuse goes on wire 3" (step 37) | No fuse in the kit BOM. | Build without, or add an inline fuse. |
 | 3 | Cell positive wire | Step 5 text and step 52 table: B+. Step 5 drawing: the P+ pad, labelled "B+/P+". Step 35 drawing: missing. | The BMS has separate B+ and P+ pads. The connection table attaches this wire to "Wire 3" instead of a pad, so drawings without wire 3 drop it. | Red cell wire on **B+**. |
 | 4 | B+ and P+ | Drawn as one pad "B+/P+" | Two pads on the board. Probably the same copper; not stated in the manufacturer's manual. | Wiring works either way. |
 | 5 | Switch position | On P+ (steps 37, 52) | GitHub diagram has it on P−. Both work. | P+, as TNKR. |
-| 6 | Servo board power | Green screw terminal (step 39) | GitHub shows the barrel jack input. The kit's barrel plugs fit it but are rated for only a few amps. | Screw terminal. |
+| 6 | Servo board power | Green screw terminal (step 39) | GitHub shows the barrel jack input. A 2.1 mm barrel connector is typically rated for only a few amps. | Screw terminal. |
 | 7 | Right foot GPIO | Photo says "gpio 26" (step 53) | Connection table: pin 13. Runtime code: GPIO 27 (pin 13). | Pin 13. |
 | 8 | Foot switch ground | Both C (COM) terminals to pin 9 with the IMU ground (step 53) | Three wires on one pin. | Pins 14 and 20. |
 | 9 | Eye LEDs | Two LEDs with 100 Ω resistors on pins 16 and 18, cathode to pin 14 (step 51) | GitHub shows three LEDs (eyes and projector) on pins 16, 18, 22 with no resistors. The runtime has eyes on GPIO 23/24 and an optional projector on GPIO 25. | Two LEDs with resistors, cathodes to the stripboard GND. |

@@ -22,7 +22,7 @@ With the 221-613, every wire must be 20 AWG or thicker. A 22 AWG lead does not c
 
 Waveshare Bus Servo Adapter (A).
 
-- **Power:** connect DC+ and DC− to the **green screw terminal**. The board also has a round DC jack, and the kit includes 2.1 mm barrel plugs that fit it, but a 2.1 mm barrel connector is typically rated for only a few amps. Fourteen STS3215 servos can draw much more when the robot stands up or walks.
+- **Power:** connect DC+ and DC− to the **green screw terminal**. The board also has a round 5.5×2.1 mm DC jack, but a 2.1 mm barrel connector is typically rated for only a few amps. Fourteen STS3215 servos can draw much more when the robot stands up or walks.
 - **Power jumpers:** set to **VM** and **ON** (TNKR step 39). Switch the pack on and check that the PWR LED lights.
 - **A/B jumper:** set to **B**. B selects USB control; A selects the UART header (Waveshare wiki). TNKR shows this only as a label in the step 47 drawing ("set to B"); no step text mentions it.
 - **Data:** USB-C on the servo board to the **middle** micro-USB port on the Pi (marked USB). With the SD card on the left, the right-hand micro-USB (PWR IN) is power only.
@@ -50,7 +50,7 @@ Most wires through the neck already have connectors:
 | Servo bus to neck and head servos | Servo bus plugs |
 | 7.4 V to the UBEC | **None by default** |
 
-Add a connector in the 7.4 V pair between the WAGO connectors and the neck. The current is low (Pi, ears, LEDs and audio, under 2 A at 7.4 V). A disconnect needs a matching pair: a 2.1 mm barrel plug **and** an inline 2.1 mm barrel jack, or an XT30 pair. The kit has 2.1 mm barrel plugs; you probably have to buy the jack. An XT60 is oversized for this line.
+Add a connector in the 7.4 V pair between the WAGO connectors and the neck. The current is low (Pi, ears, LEDs and audio, under 2 A at 7.4 V). A disconnect needs a matching pair: a 2.1 mm barrel plug **and** an inline 2.1 mm barrel jack, or an XT30 pair. The kit BOM lists one "2.1mm barrel jack" and no step uses it. Check whether yours is a plug, a socket or a pair with leads; buy the missing half. An XT60 is oversized for this line.
 
 ## No pack connector
 

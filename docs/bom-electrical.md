@@ -20,7 +20,7 @@ From the TNKR kit BOM, electrical items only.
 | 18650 cell | 2 | |
 | 18650 cell holder | 1 | |
 | Slide switch, 3 lugs | 1 | Current rating unverified, see [02-battery-pack.md](02-battery-pack.md#switch-test) |
-| 2.1 mm barrel plug | 1–2 | Fits the servo board's DC jack. Not used in this build unless paired with a jack for the head disconnect |
+| 2.1 mm barrel jack | 1 | TNKR's wording. No step uses it, and TNKR does not say whether it is a plug or a socket. Use it for the head disconnect if you can make a matching pair |
 | BNO055 IMU | 1 | |
 | SPH0645 I2S microphone | 1 | |
 | Foot contact switches | 2 | |
@@ -41,4 +41,4 @@ From the TNKR kit BOM, electrical items only.
 | Dupont housings and crimp pins | Assortment | Or cut female–female jumper wires in half |
 | Heat-shrink tube | Assortment | |
 
-Optional: inline fuse on the pack output. For the head disconnect: an XT30 pair, or an inline 2.1 mm barrel jack to mate with a kit plug.
+Optional: inline fuse on the pack output. For the head disconnect: an XT30 pair, or the missing half of a 2.1 mm barrel pair.
