@@ -26,7 +26,7 @@ Order matters. Do not change it.
 
 1. **Third lead on the holder.** Solder a yellow wire to the metal strip between the two cell positions. This is BM. Keep leads 8–10 cm. No cells in the holder yet.
 2. **Tin everything.** Tin the BMS pads (B−, BM, B+, P−, P+) and all wire ends at about 350 °C. Work quickly: the pads are heavy copper.
-3. **Continuity check.** Multimeter in continuity (beep) mode. **B− to P− must not beep.** If it does, the BMS is faulty. B+ to P+ probably beeps; the wiring does not depend on it.
+3. **Continuity check.** Multimeter in continuity (beep) mode. A meter without a beeper (such as the DT830B) works on the 200 Ω range: near 0 Ω means connected, a lone "1" means open. **B− to P− must not beep.** If it does, the BMS is faulty. B+ to P+ probably beeps; the wiring does not depend on it.
 4. **Cell wires to the BMS, in this order:** black to **B−**, then yellow to **BM**, then red to **B+**. Put the red wire on the **B+** pad, not P+. Never connect B+ before B−. With no cells in the holder this order has no electrical effect yet; it becomes the habit you repeat at cell insertion (see [Cells](#cells)).
 5. **Charger to the BMS:** BAT− to **P−** first, then BAT+ to **P+**. Some boards print BAT as OUT. BAT− must reach P−, not B−, or the BMS cannot protect during charging.
 6. **Switch:** the switch has three lugs. P+ to the **middle** lug. One **outer** lug to WAGO plus (see [03-power-distribution.md](03-power-distribution.md)). Leave the other outer lug empty. Never use both outer lugs. Heat-shrink every joint at the switch: the lugs are close together.
