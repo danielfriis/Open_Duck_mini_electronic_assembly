@@ -4,14 +4,14 @@ Found by comparing the TNKR Open Duck Mini V2 guide (steps, 2D/3D views, connect
 
 | # | Topic | TNKR shows | Reality | This repo |
 |---|---|---|---|---|
-| 1 | Pack connector | XT60 between switch and loads (steps 37–40, 52) | No XT60 in the kit BOM. The BOM lists 2.1 mm barrel plugs instead. | No pack connector. The switch cuts power. |
+| 1 | Pack connector | XT60 between switch and loads (steps 37, 39, 40, 52) | No XT60 in the kit BOM. The BOM lists 2.1 mm barrel plugs instead. | No pack connector. The switch cuts power. |
 | 2 | Fuse | "The fuse goes on wire 3" (step 37) | No fuse in the kit BOM. | Build without, or add an inline fuse. |
 | 3 | Cell positive wire | Step 5 text and step 52 table: B+. Step 5 drawing: the P+ pad, labelled "B+/P+". Step 35 drawing: missing. | The BMS has separate B+ and P+ pads. The connection table attaches this wire to "Wire 3" instead of a pad, so drawings without wire 3 drop it. | Red cell wire on **B+**. |
 | 4 | B+ and P+ | Drawn as one pad "B+/P+" | Two pads on the board. Probably the same copper; not stated in the manufacturer's manual. | Wiring works either way. |
 | 5 | Switch position | On P+ (steps 37, 52) | GitHub diagram has it on P−. Both work. | P+, as TNKR. |
 | 6 | Servo board power | Green screw terminal (step 39) | GitHub shows the barrel jack input. The kit's barrel plugs fit it but are rated for only a few amps. | Screw terminal. |
 | 7 | Right foot GPIO | Photo says "gpio 26" (step 53) | Connection table: pin 13. Runtime code: GPIO 27 (pin 13). | Pin 13. |
-| 8 | Foot switch ground | Both NO terminals to pin 9 with the IMU ground | Three wires on one pin. | Pins 14 and 20. |
+| 8 | Foot switch ground | Both C (COM) terminals to pin 9 with the IMU ground (step 53) | Three wires on one pin. | Pins 14 and 20. |
 | 9 | Eye LEDs | Two LEDs with 100 Ω resistors on pins 16 and 18, cathode to pin 14 (step 51) | GitHub shows three LEDs (eyes and projector) on pins 16, 18, 22 with no resistors. The runtime has eyes on GPIO 23/24 and an optional projector on GPIO 25. | Two LEDs with resistors, cathodes to the stripboard GND. |
 | 10 | LED rows in the connection table | Resistor 1 lead A and lead B both to pin 18; LED 1 + also to pin 18. Same for resistor 2 and pin 16. | Correct order is Pi pin → resistor → LED +. | Follow the step 51 drawing, not the table. |
 | 11 | Ear servo power | From the UBEC (step 46) | GitHub's pin table powers them from the Pi's pin 2. | UBEC via the stripboard. |
@@ -21,3 +21,5 @@ Found by comparing the TNKR Open Duck Mini V2 guide (steps, 2D/3D views, connect
 | 15 | Kit contents | FAQ: camera and microphone not included | BOM lists both. | Check your box. |
 | 16 | Pi header | BOM: Raspberry Pi Zero 2 W | The W model usually ships without a header. | Solder a 2×20 header if yours has none. |
 | 17 | Motor configuration power | GitHub: use "the battery pack" | TNKR step 1: the cell holder and two cells are enough; the finished pack comes later. | As TNKR. |
+| 18 | Servo board A/B jumper | Only a label in the step 47 drawing: "set to B". No step text mentions it; step 39 sets only VM and ON. | Waveshare: B = USB control, A = UART header. The Pi uses USB. | A/B jumper on B. Listed in the bring-up checklist. |
+| 19 | Pi under-voltage level | "Below 4.75 V" (step 44) | The Pi flags under-voltage at about 4.63 V. | Aim for 5.0–5.1 V. |

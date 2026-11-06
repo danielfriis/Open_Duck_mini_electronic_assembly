@@ -1,6 +1,6 @@
 # System overview
 
-Three wiring diagrams show every pad and every wire. They are generated from [connections.csv](../connections.csv); wire IDs (W01…) match the table.
+Three wiring diagrams show every pad and every wire. They are generated from [connections.csv](../connections.csv); wire IDs (W01…) match the table. Gaps in the numbering (W38, W42) are wires removed in a redesign; IDs are never reused.
 
 | Diagram | Shows |
 |---|---|
@@ -32,7 +32,7 @@ flowchart TD
   PI -->|USB data| SB
 ```
 
-There are two rails:
+There are three rails:
 
 | Rail | Source | Feeds |
 |---|---|---|

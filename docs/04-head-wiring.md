@@ -42,7 +42,7 @@ The servo's plug holds all three wires in one housing. Split it:
 
 1. Lift the plastic latch next to the orange wire with a needle and slide the terminal out.
 2. Put heat-shrink over the bare terminal and push it directly onto the Pi pin.
-3. Brown and red stay in the original housing, which plugs onto the stripboard header.
+3. Brown and red stay in the original housing, which plugs onto the stripboard header. Brown sits on GND, red on 5 V, and the empty cavity hangs off the 5 V edge of the board. Check with a meter before power-on: reversed, the servo gets reverse polarity.
 
 No extra parts needed. If the orange wire does not reach the Pi, extend it with a male–female jumper.
 
@@ -51,18 +51,22 @@ No extra parts needed. If the orange wire does not reach the Pi, extend it with 
 | Right ear | GPIO 12 | 32 |
 | Left ear | GPIO 13 | 33 |
 
-Source: `antennas.py` in the TNKR runtime. The code does not say whether left and right are from the duck's or your point of view. Swap the plugs if an ear moves on the wrong side.
+Source: `antennas.py` in the TNKR runtime. The code does not say whether left and right are from the duck's or your point of view. If an ear moves on the wrong side, swap the two orange terminals on pins 32 and 33.
+
+Software note: if you enable hardware PWM with `dtoverlay=pwm-2chan`, give it the pins (`pin=12,func=4,pin2=13,func2=4`). Without them the overlay takes GPIO 18/19 and breaks I2S audio.
 
 ## Eye LEDs
 
 Two LEDs, **each through its own 100 Ω resistor** in series with the anode. A GPIO pin can only supply around 16 mA.
+
+TNKR's step 51 drawing labels them 1 W flashlight LEDs. A white LED needs about 3.0–3.3 V, so on a 3.3 V pin through 100 Ω it gets only a few mA and glows dimly. That is expected and harmless. Brighter eyes need a transistor driver, which is outside this build.
 
 | LED | Anode via 100 Ω | Pin |
 |---|---|---|
 | Right eye | GPIO 23 | 16 |
 | Left eye | GPIO 24 | 18 |
 
-Join the two cathodes at the LEDs and run one wire to stripboard column 4 (GND). TNKR runs the cathode to Pi pin 14; the stripboard keeps the header pin free.
+Join the two cathodes at the LEDs and run one wire to stripboard column 4 (GND). TNKR runs the cathode to Pi pin 14; the stripboard keeps the header pin free. If an eye lights on the wrong side, swap the wires on pins 16 and 18.
 
 The runtime also supports a projector LED on GPIO 25 (pin 22). It is not in the kit.
 

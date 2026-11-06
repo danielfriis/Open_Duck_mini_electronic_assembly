@@ -143,14 +143,14 @@
 <!-- footl&#45;&gt;pi -->
 <g id="edge15" class="edge">
 <title>footl:e&#45;&gt;pi:w</title>
-<path fill="none" stroke="#3d8a4a" stroke-width="1.6" d="M227,-185C328.12,-185 345.88,-243 447,-243"/>
-<text text-anchor="middle" x="326" y="-206.8" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#666666">W47</text>
+<path fill="none" stroke="#3d8a4a" stroke-width="1.6" d="M227,-166C330.59,-166 343.41,-243 447,-243"/>
+<text text-anchor="middle" x="326" y="-197.3" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#666666">W47</text>
 </g>
 <!-- footl&#45;&gt;pi -->
 <g id="edge16" class="edge">
 <title>footl:e&#45;&gt;pi:w</title>
-<path fill="none" stroke="#1b1b1b" stroke-width="2" d="M227,-166C326.3,-166 347.7,-205 447,-205"/>
-<text text-anchor="middle" x="326" y="-178.3" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#666666">W48</text>
+<path fill="none" stroke="#1b1b1b" stroke-width="2" d="M227,-185C325.18,-185 348.82,-205 447,-205"/>
+<text text-anchor="middle" x="348" y="-187.8" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#666666">W48</text>
 </g>
 <!-- footr -->
 <g id="node4" class="node">
@@ -169,14 +169,14 @@
 <!-- footr&#45;&gt;pi -->
 <g id="edge17" class="edge">
 <title>footr:e&#45;&gt;pi:w</title>
-<path fill="none" stroke="#3d8a4a" stroke-width="1.6" d="M231,-282C327,-282 351,-282 447,-282"/>
-<text text-anchor="middle" x="328" y="-274.8" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#666666">W49</text>
+<path fill="none" stroke="#3d8a4a" stroke-width="1.6" d="M231,-263C327.37,-263 350.63,-282 447,-282"/>
+<text text-anchor="middle" x="328" y="-265.3" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#666666">W49</text>
 </g>
 <!-- footr&#45;&gt;pi -->
 <g id="edge18" class="edge">
 <title>footr:e&#45;&gt;pi:w</title>
-<path fill="none" stroke="#1b1b1b" stroke-width="2" d="M231,-263C327,-263 351,-263 447,-263"/>
-<text text-anchor="middle" x="328" y="-255.8" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#666666">W50</text>
+<path fill="none" stroke="#1b1b1b" stroke-width="2" d="M231,-282C327.37,-282 350.63,-263 447,-263"/>
+<text text-anchor="middle" x="350" y="-265.3" font-family="Helvetica,sans-Serif" font-size="9.00" fill="#666666">W50</text>
 </g>
 <!-- cam -->
 <g id="node5" class="node">

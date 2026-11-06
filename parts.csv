@@ -2,7 +2,7 @@ part,area,label_en,label_da,pins
 cells,pack,18650 cell holder (2 cells),18650-celleholder (2 celler),red=Red (+) top of pack|yellow=Yellow BM midpoint|black=Black (−) bottom of pack
 bms,pack,2S BMS (HX-2S-JH20),2S BMS (HX-2S-JH20),bneg=B−|bm=BM|bpos=B+|pneg=P−|ppos=P+
 chg,pack,USB-C charger (2S),USB-C-lader (2S),batp=BAT+|batn=BAT−
-sw,pack,Slide switch,Afbryder,com=COM|on=ON
+sw,pack,Slide switch (3 lugs),Afbryder (3 ben),com=Middle lug|on=Outer lug (ON side)
 wagop,body,WAGO plus (3-way),WAGO plus (3-vejs),a=1|b=2|c=3
 wagom,body,WAGO minus (3-way),WAGO minus (3-vejs),a=1|b=2|c=3
 sb,body,Servo board (Waveshare Bus Servo Adapter A),Servo-board (Waveshare Bus Servo Adapter A),dcp=DC+ screw terminal|dcn=DC− screw terminal|usb=USB-C|bus1=Servo bus 1|bus2=Servo bus 2

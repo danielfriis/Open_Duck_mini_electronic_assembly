@@ -4,7 +4,7 @@
 
 ![Signal wiring](../diagrams/wiring-signals.png)
 
-Viewed from above with the SD card on the left. Pin 1 is the square pad.
+Viewed from above with the SD card on the left and the header along the top edge. Even pins sit on the board edge. Pin 1 is the square pad, on the inner row.
 
 | Pin | Function | Wire from |
 |---|---|---|
@@ -15,13 +15,13 @@ Viewed from above with the SD card on the left. Pin 1 is the square pad.
 | 6 | GND | Stripboard GND rail |
 | 9 | GND | IMU GND |
 | 12 | BCLK (GPIO 18) | Microphone BCLK, chained on to amplifier BCLK |
-| 13 | GPIO 27 | Right foot switch, COM |
-| 14 | GND | Right foot switch, NO |
-| 15 | GPIO 22 | Left foot switch, COM |
+| 13 | GPIO 27 | Right foot switch, NO |
+| 14 | GND | Right foot switch, COM (C) |
+| 15 | GPIO 22 | Left foot switch, NO |
 | 16 | GPIO 23 | 100 Ω → right eye LED + |
 | 17 | 3.3 V | Microphone 3V |
 | 18 | GPIO 24 | 100 Ω → left eye LED + |
-| 20 | GND | Left foot switch, NO |
+| 20 | GND | Left foot switch, COM (C) |
 | 32 | GPIO 12 (PWM) | Right ear servo, orange wire directly |
 | 33 | GPIO 13 (PWM) | Left ear servo, orange wire directly |
 | 35 | LRC (GPIO 19) | Microphone LRCL, chained on to amplifier LRC |
@@ -49,6 +49,6 @@ IMU on I2C (pins 3, 5) and I2S audio (pins 12, 35, 38, 40) use the Pi's fixed ha
 
 ## Foot switches
 
-The switch closes when the foot touches the ground. COM goes to the GPIO, NO goes to GND. The runtime reads the pin with a pull-up.
+The switch closes when the foot touches the ground. NO goes to the GPIO, COM (marked C) goes to GND, as in TNKR step 53. The two are interchangeable: the switch only joins them. Never use NC; it inverts the reading. The runtime enables a pull-up and reads a low pin as contact.
 
-TNKR connects both feet's NO terminals to pin 9 together with the IMU ground: three wires on one pin. This build uses pins 14 and 20.
+TNKR connects both feet's C terminals to pin 9 together with the IMU ground: three wires on one pin. This build uses pins 14 and 20.

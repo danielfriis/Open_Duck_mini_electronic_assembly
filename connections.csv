@@ -43,10 +43,10 @@ W43,pi,p1,imu,vin,V3,signal,Through the neck. Dupont at the Pi
 W44,pi,p9,imu,gnd,GND,signal,Through the neck. Dupont at the Pi
 W45,pi,p3,imu,sda,I2C,signal,Through the neck. Dupont at the Pi
 W46,pi,p5,imu,scl,I2C,signal,Through the neck. Dupont at the Pi
-W47,pi,p15,footl,com,FOOT,signal,Through the neck. Dupont at the Pi
-W48,pi,p20,footl,no,GND,signal,Through the neck. Dupont at the Pi
-W49,pi,p13,footr,com,FOOT,signal,Through the neck. Dupont at the Pi
-W50,pi,p14,footr,no,GND,signal,Through the neck. Dupont at the Pi
+W47,pi,p15,footl,no,FOOT,signal,Through the neck. Dupont at the Pi. COM and NO are interchangeable; never use NC
+W48,pi,p20,footl,com,GND,signal,Through the neck. Dupont at the Pi
+W49,pi,p13,footr,no,FOOT,signal,Through the neck. Dupont at the Pi. COM and NO are interchangeable; never use NC
+W50,pi,p14,footr,com,GND,signal,Through the neck. Dupont at the Pi
 W51,pi,usb,sb,usb,USB,cable,Middle micro-USB on the Pi. Not PWR
 W52,sb,bus1,legl,in,BUS,servo cable,
 W53,sb,bus2,legr,in,BUS,servo cable,

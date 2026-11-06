@@ -1,6 +1,6 @@
 # Battery pack
 
-Parts: 18650 cell holder (2 cells), 2× 18650 cells, 2S BMS (HX-2S-JH20), USB-C 2S charger board, slide switch.
+Parts: 18650 cell holder (2 cells), 2× 18650 cells, 2S BMS (HX-2S-JH20), USB-C 2S charger board, 3-lug slide switch.
 
 ![Power wiring](../diagrams/wiring-power.png)
 
@@ -27,9 +27,9 @@ Order matters. Do not change it.
 1. **Third lead on the holder.** Solder a yellow wire to the metal strip between the two cell positions. This is BM. Keep leads 8–10 cm. No cells in the holder yet.
 2. **Tin everything.** Tin the BMS pads (B−, BM, B+, P−, P+) and all wire ends at about 350 °C. Work quickly: the pads are heavy copper.
 3. **Continuity check.** Multimeter in continuity (beep) mode. **B− to P− must not beep.** If it does, the BMS is faulty. B+ to P+ probably beeps; the wiring does not depend on it.
-4. **Cell wires to the BMS, in this order:** black to **B−**, then yellow to **BM**, then red to **B+**. Put the red wire on the **B+** pad, not P+. Never connect B+ before B−.
+4. **Cell wires to the BMS, in this order:** black to **B−**, then yellow to **BM**, then red to **B+**. Put the red wire on the **B+** pad, not P+. Never connect B+ before B−. With no cells in the holder this order has no electrical effect yet; it becomes the habit you repeat at cell insertion (see [Cells](#cells)).
 5. **Charger to the BMS:** BAT− to **P−** first, then BAT+ to **P+**. Some boards print BAT as OUT. BAT− must reach P−, not B−, or the BMS cannot protect during charging.
-6. **Switch:** P+ to the switch. The switch's other leg to WAGO plus (see [03-power-distribution.md](03-power-distribution.md)). Heat-shrink every joint at the switch: the lugs are close together.
+6. **Switch:** the switch has three lugs. P+ to the **middle** lug. One **outer** lug to WAGO plus (see [03-power-distribution.md](03-power-distribution.md)). Leave the other outer lug empty. Never use both outer lugs. Heat-shrink every joint at the switch: the lugs are close together.
 7. **P− to WAGO minus.**
 
 After this, P+ carries two wires (charger BAT+, switch) and P− carries two wires (charger BAT−, WAGO minus).
@@ -54,11 +54,11 @@ The thick wire carries the robot's current. The charger wire carries 1–2 A at 
 | P+ → switch → WAGO, P− → WAGO | 18 AWG |
 | Charger wires | 20 AWG |
 
-Source: TNKR wiring table (step 52).
+Source: TNKR wiring table (step 52) for the cell, switch and WAGO wires. The charger wire gauge is this repo's choice.
 
 ## Cells
 
-Charge both cells first. Their voltages must be within **0.05 V** of each other, or the BMS may shut off. Insert them following the holder's + and − marks. A small spark on the second cell is normal: the BMS capacitors charge.
+Charge both cells first. Their voltages must be within **0.05 V** of each other, or the BMS may shut off (TNKR step 7). Insert them following the holder's + and − marks: the bottom cell (between B− and BM) first, then the top cell (between BM and B+). A small spark on the second cell is normal: the BMS capacitors charge.
 
 ## Measurements
 
@@ -75,8 +75,15 @@ If P− to P+ reads 0 V, the BMS is asleep. Plug in the USB-C charger for a few 
 
 ## Switch test
 
-Measure across the switched output (switch out to P−). One position reads 0 V, the other reads full pack voltage. Mark the ON side.
+Measure across the switched output (the used outer lug to P−). One position reads 0 V, the other reads full pack voltage. Mark the ON side.
+
+All 14 bus servos draw through this switch: several amps while walking, more in peaks. **Unverified:** the current rating of the kit's switch. If it gets warm or the robot browns out under load, replace it with a switch rated 5 A or more.
 
 ## Switch on plus or minus?
 
-TNKR puts the switch on P+. The GitHub diagram puts it on P−. Both cut the power. This repo follows TNKR (P+), because then the robot's chassis and all grounds stay connected to the pack minus even when switched off, which is the usual convention. If your pack is already built with the switch on minus, it works; just swap the roles of the WAGO connectors accordingly.
+TNKR puts the switch on P+. The GitHub diagram puts it on P−. Both cut the power. This repo follows TNKR (P+), for two reasons:
+
+- All grounds stay tied to the pack minus when the robot is off.
+- With the switch on minus, a USB cable to a laptop (on the Pi or the servo board) gives the robot a ground path. The robot can then power up, or carry current, while it is switched "off".
+
+If your pack is already built with the switch on minus: P+ goes straight to WAGO plus, and the switch output goes to WAGO minus. Unplug USB cables to other computers before you work on it.
