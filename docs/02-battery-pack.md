@@ -16,6 +16,18 @@ The HX-2S-JH20 has two groups of pads:
 | P− | Protected output | Charger BAT−, WAGO minus |
 | P+ | Protected output | Charger BAT+, slide switch |
 
+The kit's board is marked "20A" and uses other pad labels than the names above:
+
+| Name in this guide | Printed on the kit's board |
+|---|---|
+| B− | 0V (corner next to the MOSFETs) |
+| BM | 4.2V (short edge) |
+| B+ | 8.4V (corner, top) |
+| P+ | ⊕ (middle pad next to the chip) |
+| P− | ⊖ (middle pad next to the chip) |
+
+Confirm with the continuity check below: 0V to ⊖ must read open.
+
 The protection MOSFETs sit between **B−** and **P−**. They open on over-charge, over-discharge or over-current. That is why everything outside the pack, including the charger, connects to the **P** pads.
 
 On boards of this type, B+ and P+ are usually the same copper. TNKR's drawings label one pad "B+/P+". **Unverified** for this exact board: the manufacturer's manual does not say. The wiring below is correct either way, because the cells go on B+ and the output on P+.
